@@ -8,38 +8,10 @@ body {
   background-attachment: fixed;
 }
 
-.transparent-input {
-  background-color: transparent !important;
-  border:none !important;
-  /*color: white;*/
-}
-
-.signIn {
-  float: right;
-}
-
-.box_textshadow {
-  /*text-shadow: 2px 2px 0px #FF0000; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */*/
-}
-
-.icon-padding {
-  margin-top: 40px;
-  padding-top: 40px;
-}
-
 .jumbotron {
   background-color: transparent;
   /*color: white;*/
   /*text-shadow: 2px 2px 0px #FF0000;*/
-}
-
-.page-header {
-  /*background-color: transparent;*/
-  /*color: white;*/
-}
-
-#bottom-jumbo {
-  padding-top: 5px;
 }
 
 #top-jumbo {
