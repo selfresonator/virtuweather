@@ -11,6 +11,7 @@
         $scope.city = '';
 
         $scope.getForecast = function(city) {
+
             weatherDataService.getCurrent(city)
                 .then(function(data) {
                     $scope.info.data = data.data;
@@ -18,6 +19,7 @@
                 .then(function() {
                     $scope.city = $scope.info.data.name;
                 });
+                
         };
 
     }
