@@ -1,24 +1,25 @@
-angular.module('WeatherCtrl', ['ngAudio'])
+(function() {
+    'use strict';
+    angular
+        .module('WeatherCtrl', ['ngAudio'])
+        .controller('WeatherController', WeatherController);
 
-.controller('WeatherController', function($scope,showWeather,ngAudio,$http) {
-  $scope.tagline = 'A virtual retreat to enjoy the silence of nature...';
-  $scope.info = {};
-  $scope.city = '';
-  $scope.list  = {};
-  var obj = {};
-  $scope.getForecast = function(city) {
-    showWeather.saveCity(city);
-    showWeather.getCurrent(city)
-      .then(function(data) {
-        $scope.info.data = data.data;
-      })
-      .then(function() {
-        $scope.city = $scope.info.data.name;
-      });
-    showWeather.showCity()
-      .then(function(data) {
-        console.log('city data:', data.data);
-        $scope.list = data.data;
-      });
-  };
-});
+    function WeatherController($scope, ngAudio, $http, weatherDataService) {
+
+        $scope.tagline = 'A virtual retreat to enjoy the silence of nature...';
+        $scope.info = {};
+        $scope.city = '';
+
+        $scope.getForecast = function(city) {
+            weatherDataService.getCurrent(city)
+                .then(function(data) {
+                    $scope.info.data = data.data;
+                })
+                .then(function() {
+                    $scope.city = $scope.info.data.name;
+                });
+        };
+
+    }
+
+})();
