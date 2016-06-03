@@ -10,17 +10,16 @@
         $scope.info = {};
         $scope.city = '';
         $scope.img = '';
+        $scope.getForecast = getForecast;
 
-        $scope.getForecast = function(city) {
+        function getForecast(city) {
 
             weatherDataService.getCurrent(city)
                 .then(function(data) {
-                    console.log(data);
                     $scope.info.data = data.data;
                 })
                 .then(function() {
                     var dataImage = $scope.info.data.weather[0].main;
-                    console.log(dataImage);
                     if (dataImage === 'Clear') {
                       $scope.img = '../img/oakland-clear.jpg';
                     } else if (dataImage === 'Clouds') {
@@ -38,7 +37,6 @@
                     } else if (dataImage === 'Atmosphere') {
                       $scope.img = '/../img/oakland-hazy.jpg';
                     }
-                    console.log($scope.img);
                     $scope.city = $scope.info.data.name;
                 });
 
