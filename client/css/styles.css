@@ -19,6 +19,6 @@ body {
 .main {
   width: 1280px;
   height: 900px;
-  border-left: 55;
+  /*border-left: 55;*/
   background-repeat: no-repeat;
 }
