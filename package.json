@@ -1,7 +1,7 @@
 {
   "name": "VirtuWeather",
   "version": "2.0.0",
-  "description": "Amient weather checking with VirtuWeather",
+  "description": "Ambient weather checking with VirtuWeather",
   "scripts": {
     "start": "nodemon server.js"
   },
@@ -10,6 +10,6 @@
     "express": "^4.4.5",
     "helmet": "^2.1.0",
     "method-override": "~2.0.2",
-    "morgan": "^1.7.0",
+    "morgan": "^1.7.0"
   }
 }

@@ -6,7 +6,7 @@
 
     function WeatherController($scope, ngAudio, $http, weatherDataService) {
 
-        $scope.tagline = 'A virtual retreat to enjoy the silence of nature...';
+        $scope.tagline = 'Ambient weathercasting with...';
         $scope.info = {};
         $scope.city = '';
         $scope.img = '';
@@ -20,6 +20,7 @@
                 })
                 .then(function() {
                     var dataImage = $scope.info.data.weather[0].main;
+                    $scope.city = $scope.info.data.name;
                     if (dataImage === 'Clear') {
                       $scope.img = '../img/oakland-clear.jpg';
                     } else if (dataImage === 'Clouds') {
@@ -27,7 +28,8 @@
                     } else if (dataImage === 'Snow') {
                       $scope.img = '../img/snow.jpg';
                     } else if (dataImage === 'Rain') {
-                      $scope.img = '../img/rain1.jpg';
+                      // $scope.img = '../img/rain1.jpg';
+                      $scope.img = '../img/rain2.jpg';
                     } else if (dataImage === 'Thunderstorm') {
                       $scope.img = '../img/thunderstorm.jpg';
                     } else if (dataImage === 'Drizzle' || 'Mist') {
@@ -37,7 +39,6 @@
                     } else if (dataImage === 'Atmosphere') {
                       $scope.img = '/../img/oakland-hazy.jpg';
                     }
-                    $scope.city = $scope.info.data.name;
                 });
 
         };
