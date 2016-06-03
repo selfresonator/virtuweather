@@ -1,32 +1,36 @@
-<div class="jumbotron text-center" id="top-jumbo">
-    <h1 style="font-family:'HelveticaNeue-Thin'"><i>VirtuWeather</i></h1>
-    <h2 style="font-family:'HelveticaNeue-Thin'"><i>{{ tagline }}</i></h2>
-</div>
+<div class="main" style="background-image: url('{{img}}')">
 
-<div class="col-md-4"></div>
+  <div class="jumbotron text-center" id="top-jumbo">
+      <h1 style="font-family:'HelveticaNeue-Thin'"><i>VirtuWeather</i></h1>
+      <h2 style="font-family:'HelveticaNeue-Thin'"><i>{{ tagline }}</i></h2>
+  </div>
 
-<div class="form-group">
-    <form>
-        <input type="text" ng-model="city">
-        <input type="submit" value="Search!" ng-click="getForecast(city)" placeholder="Your City...">
-    </form>
-</div>
+  <div class="col-md-4"></div>
 
-<div class="jumbotron text-center" id="bottom-jumbo">
-    <p>Welcome to <span style="font-size: 1.5em">{{ city }}</span></p>
-    <hr>
-    <ul>
+  <div class="form-group">
+      <form>
+          <input type="text" ng-model="city">
+          <input type="submit" value="Search!" ng-click="getForecast(city)" placeholder="Your City...">
+      </form>
+  </div>
 
-      <h2>Current Forecast</h2>
-      <div class="col-md-4">
-        <h3>Current Temp: <h1>{{ info.data.main.temp_max }}°F</h1></h3>
-      </div>
-      <div class="col-md-4">
-        <h3>Right Now: <h1>{{ info.data.weather[0].main }}</h1></h3>
-      </div>
-      <div class="col-md-4 box_textshadow">
-        <h3>Wind: <h1>{{ info.data.wind.speed }}mph</h1></h3>
-      </div>
+  <div class="jumbotron text-center" id="bottom-jumbo">
+      <p>Welcome to <span style="font-size: 1.5em">{{ city }}</span></p>
+      <hr>
+      <ul>
 
-    </ul>
+        <h2>Current Forecast</h2>
+        <div class="col-md-4">
+          <h3>Current Temp: <h1>{{ info.data.main.temp_max }}°F</h1></h3>
+        </div>
+        <div class="col-md-4">
+          <h3>Right Now: <h1>{{ info.data.weather[0].main }}</h1></h3>
+        </div>
+        <div class="col-md-4 box_textshadow">
+          <h3>Wind: <h1>{{ info.data.wind.speed }}mph</h1></h3>
+        </div>
+
+      </ul>
+  </div>
+
 </div>

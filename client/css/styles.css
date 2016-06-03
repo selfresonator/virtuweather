@@ -1,7 +1,12 @@
 body {
-  background-image: url('../img/oakland-hazy.jpg');
+  /*background-image: url('../img/oakland-hazy.jpg');*/
   /*background-image: url('../img/oakland-cloudy.jpg');*/
   /*background-image: url('../img/oakland-clear.jpg');*/
+  /*background-image: url('../img/lightrain.jpg');*/
+  /*background-image: url('../img/extreme.jpg');*/
+  /*background-image: url('../img/rain1.jpg');*/
+  /*background-image: url('../img/thunderstorm.jpg');*/
+  /*background-image: url('../img/snow.jpg');/*/
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: top center;
@@ -17,4 +22,10 @@ body {
 #top-jumbo {
   padding-top: 10px;
   padding-bottom: 10px
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
 }
