@@ -1,15 +1,13 @@
-'use strict';
-
 var gulp      = require('gulp'),
     nodemon   = require('gulp-nodemon'),
     bs        = require('browser-sync'),
     when      = require('gulp-if'),
-    reload    = bs.reload
+    reload    = bs.reload;
 
 var paths = {
   scripts: ['client/js/**/*.js'],
   html: ['client/js/**/*.html', 'client/index.html'],
-  style: ['client/css/style.css']
+  style: ['client/css/styles.css']
 };
 
 gulp.task('start', ['serve'],function () {

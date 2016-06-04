@@ -6,7 +6,7 @@
 
     function WeatherController($scope, ngAudio, $http, weatherDataService) {
 
-        $scope.tagline = 'Ambient weathercasting with...';
+        $scope.tagline = 'Ambient weathercasting with..';
         $scope.info = {};
         $scope.city = '';
         $scope.img = '';
