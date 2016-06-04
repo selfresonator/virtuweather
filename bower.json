@@ -2,6 +2,12 @@
   "name": "VirtuWeather",
   "version": "2.0.0",
   "description": "Amient weather checking with VirtuWeather",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/libs"
+  ],
   "dependencies": {
     "bootstrap": "latest",
     "angular": "~1.5.5",
