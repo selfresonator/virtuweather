@@ -1,8 +1,8 @@
-var gulp      = require('gulp'),
-    nodemon   = require('gulp-nodemon'),
-    bs        = require('browser-sync'),
-    when      = require('gulp-if'),
-    reload    = bs.reload;
+var gulp = require('gulp'),
+    nodemon = require('gulp-nodemon'),
+    livereload = require('gulp-livereload'),
+    when = require('gulp-if'),
+    reload = bs.reload;
 
 var paths = {
   scripts: ['client/js/**/*.js'],
@@ -11,6 +11,7 @@ var paths = {
 };
 
 gulp.task('start', ['serve'],function () {
+  livereload.watch()
   bs({
     notify: true,
     injectChanges: true,
