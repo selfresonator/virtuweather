@@ -14,6 +14,6 @@ app.use(express.static(__dirname + '/client'));
 
 app.listen(port);
 
-console.log('Magic happens on port ' + port);
+console.log('Server up on port: ' + port);
 
 exports = module.exports = app;
