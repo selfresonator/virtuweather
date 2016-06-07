@@ -30,10 +30,7 @@ Type in a city and experience the weather... virtually!
 
 ### Installing Dependencies
 
-
 - __Install your Dependencies__:
-
-Make sure to install and start PostgreSQL and psql [here](https://www.postgresql.org/download/).
 
 From within the root directory:
 ```sh
