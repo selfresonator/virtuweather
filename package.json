@@ -1,7 +1,7 @@
 {
   "name": "VirtuWeather",
   "version": "2.0.0",
-  "description": "Ambient weather checking with VirtuWeather",
+  "description": "Ambient weathercasting with VirtuWeather",
   "scripts": {
     "start": "nodemon server.js"
   },

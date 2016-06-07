@@ -11,7 +11,8 @@ var paths = {
 };
 
 gulp.task('start', ['serve'],function () {
-  livereload.watch()
+  livereload.watch();
+  console.log('here');
   bs({
     notify: true,
     injectChanges: true,
