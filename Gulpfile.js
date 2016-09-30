@@ -1,8 +1,8 @@
 var gulp = require('gulp'),
     nodemon = require('gulp-nodemon'),
     livereload = require('gulp-livereload'),
-    when = require('gulp-if'),
-    reload = bs.reload;
+    when = require('gulp-if');
+    // reload = bs.reload;
 
 var paths = {
   scripts: ['client/js/**/*.js'],
@@ -11,14 +11,7 @@ var paths = {
 };
 
 gulp.task('start', ['serve'],function () {
-  livereload.watch();
-  console.log('here');
-  bs({
-    notify: true,
-    injectChanges: true,
-    files: paths.scripts.concat(paths.html, paths.styles),
-    proxy: 'localhost:8000'
-  });
+  console.log('Gulp Started');
 });
 
 gulp.task('serve', function() {

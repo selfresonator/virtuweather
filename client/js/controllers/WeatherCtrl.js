@@ -17,12 +17,9 @@
 
             weatherDataService.getCurrent(city)
                 .then(function(data) {
-
                     $scope.info.data = data.data;
-
                 })
                 .then(function() {
-
                     var dataImage = $scope.info.data.weather[0].main;
                     $scope.city = $scope.info.data.name;
                     if (dataImage === 'Clear') {
@@ -58,11 +55,7 @@
                         $scope.aud = '';
                         ngAudio.play($scope.aud);
                     }
-
                 });
-
         }
-
     }
-
 })();
